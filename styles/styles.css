@@ -331,15 +331,13 @@ body {
 
 html {
   background: #e3e4fc;
-  background-image: url("/assets/tg-id-tile.png");
-  background-size: 48px;
-  background-position: 50% 295px;
 }
-@media only screen and (max-width: 768px) {
-  html {
-    background-size: 40px;
-    background-position: 50% 250px;
-  }
+
+body {
+  background-image: url("/assets/tg-id-tile.png");
+  background-size: 40px;
+  background-attachment: fixed;
+  background-position: 50%;
 }
 
 header, main, footer {
@@ -354,7 +352,7 @@ header {
   justify-content: center;
   align-items: center;
   background: #e3e4fc;
-  height: 200px;
+  height: 175px;
   border-bottom: solid rgba(40, 43, 44, 0.95) 3px;
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
   z-index: 100;
@@ -372,7 +370,7 @@ section {
   align-items: center;
   gap: 25px;
   width: 88vw;
-  max-width: 850px;
+  max-width: 1000px;
   margin: 40px auto;
   padding: 25px;
   background: #aabcda;
@@ -455,7 +453,7 @@ h1 img {
   padding: 25px;
   padding-bottom: 10px;
   width: 90vw;
-  max-width: 350px;
+  max-width: 300px;
   pointer-events: none;
 }
 @media only screen and (max-width: 768px) {
