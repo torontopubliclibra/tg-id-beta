@@ -315,6 +315,7 @@ section p, section a {
 footer p, footer a {
   text-align: center;
   font-size: 0.85rem;
+  letter-spacing: 0.025rem;
 }
 
 @keyframes fade-in {
