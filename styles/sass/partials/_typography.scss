@@ -1,0 +1,97 @@
+// import variables
+@use "variables" as *;
+
+// font imports
+@font-face {
+  font-family: "LibreFranklin";
+  src: url(/fonts/Libre_Franklin/LibreFranklin-VariableFont_wght.ttf) format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "LibreFranklinItalic";
+  src: url(/fonts/Libre_Franklin/LibreFranklin-Italic-VariableFont_wght.ttf) format("truetype");
+  font-display: swap;
+}
+
+* {
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+  text-align: center;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 16px;
+  }
+}
+
+body, header, footer, button, select, a {
+  color: $black;
+}
+
+// default typography
+body, button, input, select {
+  font-family: "LibreFranklin", sans-serif;
+  font-display: swap;
+  line-height: 1.25;
+  letter-spacing: 2%;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 800;
+}
+
+h1 {
+  line-height: 1;
+  font-family: "LibreFranklin", sans-serif;
+  font-size: 4rem;
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 1.5rem;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 1.25rem;
+  }
+}
+
+h3 {
+  font-size: 1.25rem;
+  letter-spacing: 0.3px;
+  line-height: 2;
+}
+
+a {
+  &:hover {
+    color: $color4;
+    font-style: italic;
+
+    @media only screen and (max-width: $tablet) {
+      color: $black;
+      font-style: normal;
+    }
+  }
+}
+
+section {
+  p, a {
+    font-size: 0.95rem;
+  }
+}
+
+footer {
+  p, a {
+    text-align: center;
+    font-size: 0.85rem;
+  }
+}
