@@ -32,6 +32,8 @@
 		<link rel="preload" href="/assets/file-download.svg" as="image" />
 		<link rel="preload" href="/assets/info.svg" as="image" />
 		<link rel="preload" href="/assets/external-link.svg" as="image" />
+		<link rel="preload" href="/assets/clipboard.svg" as="image" />
+		<link rel="preload" href="/assets/link.svg" as="image" />
 
 		<!-- style import -->
 		<link rel="stylesheet" href="/styles/styles.css"/>
@@ -70,11 +72,21 @@
 			<div class="wrapper">
 				<h2>Legal name changes</h2>
 
-				<h3>Process</h3>
+				<h3 id="process">
+					Process
+					<button onclick="navigator.clipboard.writeText('https://tg-id.ca/name-changes#process'); window.location.href='#process'; alert('Link copied to clipboard')">
+						<img src="/assets/link.svg" alt="link icon">
+					</button>
+				</h3>
 				<p>To change your name, you will need to fill out the <a href="/downloads#11155e" target="_blank" rel="norefferer">Ontario Application to Change an Adult's Name (11155e)</a>. This part of the presentation is based on the application updated as of October 2022. Please make sure you are filling out the most recent version of this form.</p>
 				<p>The application is nineteen pages long, and divided into seven parts, but you may not need to fill out all of them. You must also submit a fee of $137 with your application.</p>
 
-				<h3>Requirements</h3>
+				<h3 id="requirements">
+					Requirements
+					<button onclick="navigator.clipboard.writeText('https://tg-id.ca/name-changes#requirements'); window.location.href='#requirements'; alert('Link copied to clipboard')">
+						<img src="/assets/link.svg" alt="link icon">
+					</button>
+				</h3>
 
 				<h4>Information to disclose</h4>
 				<p>This application requires you to fill out a lot of your personal information, including:</p>
@@ -115,7 +127,12 @@
 				<h4>Commissioning</h4>
 				<p>You must sign the statutory declaration on page 16 in front of a commissioner for taking affidavits, who will seal or stamp the document at that time to verify your identity and the accuracy of the information as written. The commissioner does not have to know the person signing the application. Several notary/commissioner's offices in Ontario will commission these documents for trans individuals for no charge; however, the typical charge if applicable is $30-45.</p>
 
-				<h3>Submitting your application</h3>
+				<h3 id="submitting-your-application">
+					Submitting your application
+					<button onclick="navigator.clipboard.writeText('https://tg-id.ca/name-changes#submitting-your-application'); window.location.href='#submitting-your-application'; alert('Link copied to clipboard')">
+						<img src="/assets/link.svg" alt="link icon">
+					</button>
+				</h3>
 
 				<h4>By mail</h4>
 				<p>If possible, we recommend sending the entire application in a tracked envelope using Canada Post, to ease the stress of your application getting lost in the mail, and to allow for an update when it is likely beginning to be processed.</p> 
@@ -126,6 +143,9 @@
 					189 Red River Road<br/>
 					Thunder Bay, ON<br/>
 					P7B 5W0
+					<button onclick="navigator.clipboard.writeText('Office of the Registrar General P.O. Box 3000, 189 Red River Road, Thunder Bay, ON, P7B 5W0'); alert('Address copied to clipboard')">
+						<img src="/assets/clipboard.svg" alt="copy icon">
+					</button>
 				</blockquote>
 
 				<h4>In person</h4>
@@ -135,6 +155,9 @@
 					47 Sheppard Avenue East, Unit 417, 4th Floor<br/>
 					Toronto, ON<br/>
 					M2N 5N1
+					<button onclick="navigator.clipboard.writeText('ServiceOntario, 47 Sheppard Avenue East, Unit 417, 4th Floor, Toronto, ON, M2N 5N1'); alert('Address copied to clipboard')">
+						<img src="/assets/clipboard.svg" alt="copy icon">
+					</button>
 				</blockquote>
 				
 				<h4>Delivery time</h4>
