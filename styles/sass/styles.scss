@@ -130,13 +130,17 @@ section {
     padding-top: 175px;
     margin-bottom: -195px;
 
+    &:last-of-type {
+        margin-bottom: 50px;
+    }
+
     @media only screen and (max-width: $mobile) {
         padding-top: 225px;
         margin-bottom: -245px;
-    }
 
-    &:last-of-type {
-        margin-bottom: 0;
+        &:last-of-type {
+            margin-bottom: 0;
+        }
     }
 
     .wrapper {
