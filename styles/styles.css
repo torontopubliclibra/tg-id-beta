@@ -317,19 +317,21 @@ footer p, footer a {
   font-size: 0.85rem;
 }
 
-@keyframes fadeInZoomOut {
-  from {
+@keyframes fade-in {
+  0% {
     opacity: 0;
-    transform: scale(0);
   }
-  to {
+  100% {
     opacity: 1;
-    transform: scale(1);
   }
 }
+body {
+  animation: fade-in 1.25s;
+}
+
 html {
   background: #e3e4fc;
-  background-image: url("../../assets/trans-id_bg.png");
+  background-image: url("/assets/tg-id-bg.png");
   background-size: 552px;
 }
 
