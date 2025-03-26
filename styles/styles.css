@@ -578,6 +578,9 @@ section .links .link:hover {
 }
 section .links .link.disabled {
   opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 section .links .link.disabled:hover {
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
