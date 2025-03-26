@@ -91,11 +91,9 @@ h4 {
 a {
   &:hover {
     color: $color4;
-    font-style: italic;
 
     @media only screen and (max-width: $tablet) {
       color: $black;
-      font-style: normal;
     }
   }
 

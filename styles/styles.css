@@ -317,12 +317,10 @@ h4 {
 
 a:hover {
   color: #975d83;
-  font-style: italic;
 }
 @media only screen and (max-width: 970px) {
   a:hover {
     color: #282B2C;
-    font-style: normal;
   }
 }
 a.header-link {
