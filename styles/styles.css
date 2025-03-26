@@ -335,9 +335,16 @@ html {
 
 body {
   background-image: url("/assets/tg-id-tile.png");
-  background-size: 40px;
+  background-size: 45px 50px;
   background-attachment: fixed;
   background-position: 50%;
+  height: 100%;
+  min-height: calc(100vh - 75px);
+}
+@media only screen and (max-width: 500px) {
+  body {
+    background-size: 90px 100px;
+  }
 }
 
 header, section, footer {
@@ -443,8 +450,8 @@ header .nav-links .link .link-title img {
   width: 20px;
   margin-right: 10px;
 }
-header .nav-links .link .link-title img.rotate {
-  transform: rotate(180deg);
+header .nav-links .link .link-title img.smaller {
+  padding: 1px;
 }
 header .nav-links .link .link-title p {
   text-align: left;
@@ -491,6 +498,24 @@ section:first-of-type .wrapper {
 section p {
   margin: 0;
   margin-bottom: 10px;
+}
+section ul {
+  width: 100%;
+  max-width: 650px;
+  padding-left: 25px;
+  margin: 0;
+}
+section ul li {
+  text-align: left;
+  margin-bottom: 5px;
+}
+section ul li a {
+  font-size: 0.85rem;
+}
+@media only screen and (max-width: 500px) {
+  section ul li a {
+    font-size: 0.95rem;
+  }
 }
 section .links {
   display: flex;
@@ -590,6 +615,9 @@ section .downloads .download .link-title img {
   width: 20px;
   margin-right: 10px;
 }
+section .downloads .download .link-title img.smaller {
+  padding: 1px;
+}
 section .downloads .download .link-title p {
   text-align: left;
 }
@@ -632,8 +660,9 @@ h1 .hide {
 }
 
 footer {
-  height: 75px;
+  height: 100px;
   padding: 5px 20px;
+  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -641,4 +670,8 @@ footer {
   background: #e3e4fc;
   border-top: solid rgba(40, 43, 44, 0.95) 3px;
   gap: 10px;
+  z-index: 100;
+}
+footer p {
+  margin: 0;
 }

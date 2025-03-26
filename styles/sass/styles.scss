@@ -10,9 +10,14 @@ html {
 
 body {
     background-image: url('/assets/tg-id-tile.png');
-    background-size: 40px;
+    background-size: 45px 50px;
     background-attachment: fixed;
     background-position: 50%;
+    height: 100%;
+    min-height: calc(100vh - 75px);
+    @media only screen and (max-width: $mobile) {
+        background-size: 90px 100px;
+    }
 }
 
 header, section, footer {
@@ -113,8 +118,8 @@ header {
                     width: 20px;
                     margin-right: 10px;
 
-                    &.rotate {
-                        transform: rotate(180deg);
+                    &.smaller {
+                        padding: 1px;
                     }
                 }
                 p {
@@ -169,6 +174,26 @@ section {
     p {
         margin: 0;
         margin-bottom: 10px;
+    }
+
+    ul {
+        width: 100%;
+        max-width: 650px;
+        padding-left: 25px;
+        margin: 0;
+
+        li {
+            text-align: left;
+            margin-bottom: 5px;
+
+            a {
+                font-size: 0.85rem;
+
+                @media only screen and (max-width: $mobile) {
+                    font-size: 0.95rem;
+                }
+            }
+        }
     }
 
     .links {
@@ -273,6 +298,10 @@ section {
                 img {
                     width: 20px;
                     margin-right: 10px;
+
+                    &.smaller {
+                        padding: 1px;
+                    }
                 }
                 p {
                     text-align: left;
@@ -321,8 +350,9 @@ h1 {
 }
 
 footer {
-    height: 75px;
+    height: 100px;
     padding: 5px 20px;
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -330,4 +360,9 @@ footer {
     background: $white;
     border-top: solid rgba($black, 0.95) 3px;
     gap: 10px;
+    z-index: 100;
+
+    p {
+        margin: 0;
+    }
 }
