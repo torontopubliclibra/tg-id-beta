@@ -325,7 +325,7 @@ footer p, footer a {
     opacity: 1;
   }
 }
-body {
+section, section * {
   animation: fade-in 1.25s;
 }
 
@@ -340,7 +340,7 @@ body {
   background-position: 50%;
 }
 
-header, main, footer {
+header, section, footer {
   margin: 0;
 }
 
@@ -348,46 +348,205 @@ header {
   position: sticky;
   top: 0;
   display: flex;
-  flex-flow: column;
   justify-content: center;
   align-items: center;
   background: #e3e4fc;
   height: 175px;
+  margin-bottom: -175px;
   border-bottom: solid rgba(40, 43, 44, 0.95) 3px;
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
   z-index: 100;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   header {
-    height: 150px;
+    height: 225px;
+    margin-bottom: -225px;
   }
 }
-
-section {
+header .wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  max-width: 1000px;
+}
+@media only screen and (max-width: 970px) {
+  header .wrapper {
+    width: 95vw;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .wrapper {
+    flex-direction: column-reverse;
+  }
+}
+header .nav-links {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+  width: 200px;
+}
+@media only screen and (max-width: 970px) {
+  header .nav-links {
+    width: 170px;
+    padding: 0 10px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .nav-links {
+    margin-top: 5px;
+    flex-direction: row-reverse;
+    width: 98%;
+    margin: 0 auto;
+  }
+}
+header .nav-links .link {
+  background: #B184A2;
+  border: solid rgba(40, 43, 44, 0.95) 3px;
+  border-radius: 8px;
+  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  max-width: 200px;
+}
+@media only screen and (max-width: 500px) {
+  header .nav-links .link {
+    max-width: 50%;
+  }
+}
+header .nav-links .link:hover {
+  color: #282B2C;
+  font-style: normal;
+  box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
+}
+@media only screen and (max-width: 970px) {
+  header .nav-links .link:hover {
+    box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+  }
+}
+header .nav-links .link p {
+  margin: 0;
+  padding: 10px;
+}
+header .nav-links .link .link-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  width: 100%;
+}
+header .nav-links .link .link-title img {
+  width: 20px;
+  margin-right: 10px;
+}
+header .nav-links .link .link-title img.rotate {
+  transform: rotate(180deg);
+}
+header .nav-links .link .link-title p {
+  text-align: left;
+}
+
+section {
+  padding-top: 175px;
+  margin-bottom: -195px;
+}
+@media only screen and (max-width: 500px) {
+  section {
+    padding-top: 225px;
+    margin-bottom: -245px;
+  }
+}
+section:last-of-type {
+  margin-bottom: 0;
+}
+section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
   width: 88vw;
   max-width: 1000px;
-  margin: 40px auto;
+  margin: 50px auto;
   padding: 25px;
   background: #aabcda;
   border: solid rgba(40, 43, 44, 0.95) 3px;
   border-radius: 8px;
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
 }
+@media only screen and (max-width: 500px) {
+  section .wrapper {
+    margin: 20px auto;
+  }
+}
+section:first-of-type .wrapper {
+  margin-bottom: 20px;
+}
 section p {
   margin: 0;
   margin-bottom: 10px;
+}
+section .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+section .links .link {
+  background: #bebfde;
+  border: solid rgba(40, 43, 44, 0.95) 3px;
+  border-radius: 8px;
+  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+  max-width: 650px;
+}
+section .links .link:hover {
+  color: #282B2C;
+  font-style: normal;
+  box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
+}
+@media only screen and (max-width: 970px) {
+  section .links .link:hover {
+    box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+  }
+}
+section .links .link p {
+  margin: 0;
+  padding: 10px;
+}
+section .links .link .link-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  width: 100%;
+}
+section .links .link .link-title img {
+  width: 20px;
+  margin-right: 10px;
+}
+section .links .link .link-title img.rotate {
+  transform: rotate(180deg);
+}
+section .links .link .link-title p {
+  text-align: left;
 }
 section .downloads {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
   width: 100%;
   margin-bottom: 10px;
 }
@@ -456,11 +615,13 @@ h1 img {
   max-width: 300px;
   pointer-events: none;
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 500px) {
   h1 img {
     height: 140px;
     width: auto;
     max-width: auto;
+    padding: 20px;
+    padding-bottom: 5px;
   }
 }
 h1 .hide {

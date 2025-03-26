@@ -15,7 +15,7 @@ body {
     background-position: 50%;
 }
 
-header, main, footer {
+header, section, footer {
     margin: 0;
 }
 
@@ -23,38 +23,205 @@ header {
     position: sticky;
     top: 0;
     display: flex;
-    flex-flow: column;
     justify-content: center;
     align-items: center;
     background: $white;
     height: 175px;
+    margin-bottom: -175px;
     border-bottom: solid rgba($black, 0.95) 3px;
     box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
     z-index: 100;
 
     @media only screen and (max-width: $mobile) {
-        height: 150px;
+        height: 225px;
+        margin-bottom: -225px;
+    }
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        width: 90vw;
+        max-width: 1000px;
+
+        @media only screen and (max-width: $tablet) {
+            width: 95vw;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            flex-direction: column-reverse;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 200px;
+
+        @media only screen and (max-width: $tablet) {
+            width: 170px;
+            padding: 0 10px;
+        }
+
+        @media only screen and (max-width: $mobile) {
+            margin-top: 5px;
+            flex-direction: row-reverse;
+            width: 98%;
+            margin: 0 auto;
+        }
+
+        .link {
+            background: $color2;
+            border: solid rgba($black, 0.95) 3px;
+            border-radius: 8px;
+            box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            max-width: 200px;
+
+            @media only screen and (max-width: $mobile) {
+                max-width: 50%;
+            }
+
+            &:hover {
+                color: $black;
+                font-style: normal;
+                box-shadow: 0 1px 2px rgba($white, 0.8), 0 -1px 2px rgba($black, 0.3), inset 0 2px 2px rgba($black, 0.4), inset 0 -2px 2px rgba($white, 0.6);
+
+                @media only screen and (max-width: $tablet) {
+                    box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+                }
+            }
+
+            p {
+                margin: 0;
+                padding: 10px;
+            }
+
+            .link-title {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 5px;
+                width: 100%;
+                img {
+                    width: 20px;
+                    margin-right: 10px;
+
+                    &.rotate {
+                        transform: rotate(180deg);
+                    }
+                }
+                p {
+                    text-align: left;
+                }
+            }
+        }
     }
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 25px;
-    width: 88vw;
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 25px;
-    background: $color3;
-    border: solid rgba($black, 0.95) 3px;
-    border-radius: 8px;
-    box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+
+    padding-top: 175px;
+    margin-bottom: -195px;
+
+    @media only screen and (max-width: $mobile) {
+        padding-top: 225px;
+        margin-bottom: -245px;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 88vw;
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 25px;
+        background: $color3;
+        border: solid rgba($black, 0.95) 3px;
+        border-radius: 8px;
+        box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+
+        @media only screen and (max-width: $mobile) {
+            margin: 20px auto;
+        }
+    }
+
+    &:first-of-type .wrapper {
+        margin-bottom: 20px;
+    }
 
     p {
         margin: 0;
         margin-bottom: 10px;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        margin-bottom: 10px;
+
+        .link {
+            background: $color1;
+            border: solid rgba($black, 0.95) 3px;
+            border-radius: 8px;
+            box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width: 100%;
+            max-width: 650px;
+
+            &:hover {
+                color: $black;
+                font-style: normal;
+                box-shadow: 0 1px 2px rgba($white, 0.8), 0 -1px 2px rgba($black, 0.3), inset 0 2px 2px rgba($black, 0.4), inset 0 -2px 2px rgba($white, 0.6);
+
+                @media only screen and (max-width: $tablet) {
+                    box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+                }
+            }
+
+            p {
+                margin: 0;
+                padding: 10px;
+            }
+
+            .link-title {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 5px;
+                width: 100%;
+                img {
+                    width: 20px;
+                    margin-right: 10px;
+
+                    &.rotate {
+                        transform: rotate(180deg);
+                    }
+                }
+                p {
+                    text-align: left;
+                }
+            }
+        }
     }
 
     .downloads {
@@ -62,7 +229,7 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 25px;
+        gap: 15px;
         width: 100%;
         margin-bottom: 10px;
 
@@ -140,6 +307,8 @@ h1 {
             height: 140px;
             width: auto;
             max-width: auto;
+            padding: 20px;
+            padding-bottom: 5px;
         }
     }
     .hide {
