@@ -124,7 +124,6 @@ h4 {
 }
 
 a {
-  word-break: break-all; 
   &:hover {
     color: $color4;
 
@@ -188,6 +187,10 @@ section {
         }
       }
     }
+  }
+
+  &#sources a {
+    word-break: break-all;
   }
 }
 

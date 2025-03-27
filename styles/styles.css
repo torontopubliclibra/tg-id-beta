@@ -341,9 +341,6 @@ h4 {
   }
 }
 
-a {
-  word-break: break-all;
-}
 a:hover {
   color: #975d83;
 }
@@ -395,6 +392,9 @@ section blockquote button:hover img {
   section blockquote button:hover img {
     filter: none;
   }
+}
+section#sources a {
+  word-break: break-all;
 }
 
 footer p, footer a, footer span {
