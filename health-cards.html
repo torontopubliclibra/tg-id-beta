@@ -3,20 +3,20 @@
 	<head>
 
 		<!-- title, description, and browser metadata -->
-		<title>TG I.D.</title>
-		<meta name="title" content="TG I.D." />
-		<meta property="og:title" content="TG I.D." />
+		<title>TG I.D. | Ontario health cards</title>
+		<meta name="title" content="TG I.D. | Ontario health cards" />
+		<meta property="og:title" content="TG I.D. | Ontario health cards" />
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 		<meta name="theme-color" content="#e3e4fc"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://tg-id.ca" />
-		<meta name="description" content="TG I.D. is an online resource collecting information on how to update legal names, gender markers, and identity documents as a trans, non-binary, Two-Spirit, or gender non-conforming individual living in Ontario, Canada." />
-		<meta property="og:description" content="TG I.D. is an online resource collecting information on how to update legal names, gender markers, and identity documents as a trans, non-binary, Two-Spirit, or gender non-conforming individual living in Ontario, Canada." />
+		<meta property="og:url" content="https://tg-id.ca/health-cards" />
+		<meta name="description" content="Information on changing your name on an Ontario health card." />
+		<meta property="og:description" content="Information on changing your name on an Ontario health card." />
 		<meta name="author" content="Dana Rosamund Teagle" />
 
-		<!-- favicon -->
+		<!-- favicons and banners -->
 		<link rel="apple-touch-icon-precomposed" href="/assets/favicon-touch.png">
 		<link rel="shortcut icon" href="/assets/favicon-192.png" sizes="192x192" >
 		<link rel="icon" href="/assets/favicon.ico" type="image/icon type"/>
@@ -29,9 +29,11 @@
 		<!-- preloaded image and icons -->
 		<link rel="preload" href="/assets/tg-id-tile.png" as="image" />
 		<link rel="preload" href="/assets/tg-id-logo.png" as="image" />
-		<link rel="preload" href="/assets/arrow-left.svg" as="image" />
+		<link rel="preload" href="/assets/file-download.svg" as="image" />
 		<link rel="preload" href="/assets/info.svg" as="image" />
 		<link rel="preload" href="/assets/external-link.svg" as="image" />
+		<link rel="preload" href="/assets/clipboard.svg" as="image" />
+		<link rel="preload" href="/assets/link.svg" as="image" />
 
 		<!-- style import -->
 		<link rel="stylesheet" href="/styles/styles.css"/>
@@ -55,7 +57,7 @@
 							<img src="/assets/external-link.svg" class="smaller" alt="external link icon">
 						</span>
 					</a>
-					<a class="link" href="#about">
+					<a class="link" href="./#about">
 						<span class="link-title">
 							<p class="button-label">About</p>
 							<img src="/assets/info.svg" alt="info icon">
@@ -65,16 +67,68 @@
 			</div>
 		</header>
 
-		<section id="links">
+		<!-- main sections -->
+		<section id="health-cards">
 			<div class="wrapper">
+				<h2>Ontario health cards</h2>
+
 				<div class="links">
-					<h2>Navigate to</h2>
-					<a class="link" href="./downloads">
+					<h3>Jump to</h3>
+					<a class="link" href="#process">
 						<span class="link-title">
-							<p class="button-label">Downloads</p>
-							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
+							<p class="button-label">Process</p>
+							<img src="/assets/arrow-left.svg" class="rotate-2" alt="download icon">
 						</span>
 					</a>
+					<a class="link" href="#important-considerations">
+						<span class="link-title">
+							<p class="button-label">Important considerations</p>
+							<img src="/assets/arrow-left.svg" class="rotate-2" alt="download icon">
+						</span>
+					</a>
+				</div>
+
+				<h3 id="process">
+					Process
+					<button onclick="navigator.clipboard.writeText('https://tg-id.ca/health-cards#process'); window.location.href='#process'">
+						<img src="/assets/link.svg" alt="link icon">
+					</button>
+				</h3>
+				<p>To change your name on your health card, you must visit a ServiceOntario and bring a completed <a href="/downloads#0280-82e" target="_blank" rel="norefferer">Change of Information form (0280-82e)</a> as well as an original copy of one of the following documents:</p>
+				<ol>
+					<li>Canadian birth certificate</li>
+					<li>Canadian change of name certificate</li>
+					<li>a citizenship/immigration status document in the name</li>
+				</ol>
+
+				<h3 id="important-considerations">
+					Important considerations
+					<button onclick="navigator.clipboard.writeText('https://tg-id.ca/health-cards#important-considerations'); window.location.href='#important-considerations'">
+						<img src="/assets/link.svg" alt="link icon">
+					</button>
+				</h3>
+
+				<h4>French language characters</h4>
+				<p>As of August 3, 2022, you can now add French language characters to your name on your Ontario health card. To request a new health card and name change with French language characters at no cost, visit a ServiceOntario location with documents proving your legal name and showing those characters. If your Canadian citizenship or OHIP-eligible immigration document does not show your legal name with French language characters, you can show a proof of residency or proof of identity document showing French characters in your legal name.</p>
+
+			</div>
+		</section>
+
+		<section id="sources">
+			<div class="wrapper">
+				<div class="sources">
+					<h2>Sources</h2>
+					<ul>
+						<li><a href="https://www.ontario.ca/page/replace-cancel-or-change-information-your-health-card#section-3" target="_blank" rel="norefferer">https://www.ontario.ca/page/replace-cancel-or-change-information-your-health-card#section-3</a></li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<div class="wrapper">
+				<div class="sources">
+					<h2>See also</h2>
 					<a class="link" href="./name-changes">
 						<span class="link-title">
 							<p class="button-label">Legal name changes</p>
@@ -87,35 +141,13 @@
 							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
 						</span>
 					</a>
-					<a class="link" href="./health-cards">
-						<span class="link-title">
-							<p class="button-label">Ontario health cards</p>
-							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
-						</span>
-					</a>
 					<a class="link" href="./drivers-licenses">
 						<span class="link-title">
 							<p class="button-label">Ontario driver's licenses & photo cards</p>
 							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
 						</span>
 					</a>
-					<a class="link" href="./travel-documents">
-						<span class="link-title">
-							<p class="button-label">Travel documents</p>
-							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
-						</span>
-					</a>
 				</div>
-			</div>
-		</section>
-
-		<section id="about">
-			<div class="wrapper">
-				<h2>About TG I.D.</h2>
-				<p>TG I.D. is an online resource collecting information on how to update legal names, gender markers, and identity documents as a trans, non-binary, Two-Spirit, or gender non-conforming individual living in Ontario, Canada.</p>
-				<p>The project is run by <a href="https://danateagle.com" target="_blank" rel="norefferer">Dana Rosamund Teagle</a>—a designer, web/software developer, and trans woman based in Tkaronto (Toronto), Ontario. Dana has led workshops on name and gender marker changes since 2021.</p>
-				<p>The level of bureaucracy currently in place across the country for these vital services and processes makes them fundamentally inaccessible. We believe that communities coming together to share our experiences and resources with one another is an act of resistance, and that mentality is embedded in our approach.</p>
-				<p>This site does not in any way provide legal advice. If you feel unsure about any information provided, please cross-reference the official sources linked at the bottom of each page, or <a href="mailto:contact@danateagle.com">contact the webmaster</a> with your concerns. Should you require legal info or resources, we recommend checking out the <a href="https://justicetrans.org/" target="_blank" rel="norefferer">JusticeTrans</a> website.</p>
 			</div>
 		</section>
 
