@@ -680,7 +680,7 @@ section .link .link-title img.rotate-2 {
 section .link .link-title p {
   text-align: left;
 }
-section .downloads {
+section .downloads, section .sources {
   display: flex;
   flex-direction: column;
   justify-content: center;
