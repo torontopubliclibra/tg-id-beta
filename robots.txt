@@ -1,0 +1,9 @@
+# TG I.D. | tg-id.ca
+
+User-agent: *
+Disallow: /assets/
+Disallow: /data/
+Disallow: /fonts/
+Disallow: /scripts/
+
+Sitemap: https://tg-id.ca/sitemap.xml
