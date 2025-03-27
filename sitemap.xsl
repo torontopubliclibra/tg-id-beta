@@ -13,8 +13,7 @@
         <html class="sitemap">
             <head>
                 <title>
-                    TG I.D. | sitemapindex
-                    <xsl:if test="sitemap:sitemapindex">Index</xsl:if>
+                    TG I.D. | Sitemap
                 </title>
                 <link rel="stylesheet" href="./styles/styles.css"/>
             </head>
