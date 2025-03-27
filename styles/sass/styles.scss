@@ -14,7 +14,7 @@ body {
     background-attachment: fixed;
     background-position: 50%;
     height: 100%;
-    min-height: calc(100vh - 75px);
+    min-height: calc(100% - 75px);
     @media only screen and (max-width: $mobile) {
         background-size: 67.5px 75px;
     }
@@ -170,8 +170,14 @@ section {
         }
 
         &.four-oh-four {
-            min-height: calc(100vh - 375px);
+            margin: 185px auto !important;
+            padding: 40px 25px !important;
             justify-content: center;
+
+            @media only screen and (max-width: $mobile) {
+                margin: 175px auto;
+                margin-bottom: 175px !important;
+            }
             
             h2 {
                 justify-content: flex-end;
@@ -180,17 +186,13 @@ section {
             .link .link-title {
                 flex-direction: row-reverse;
             }
-
-            h2, .link {
-                max-width: 500px;
-                margin: 0 auto;
-            }
         }
 
         &.sitemap {
-            min-height: 200px;
-            margin: 75px auto !important;
             justify-content: center;
+            margin-top: 125px !important;
+            margin-bottom: 100px !important;
+            padding: 40px !important;
 
             @media only screen and (max-width: $mobile) {
                 margin: 20px auto !important;
@@ -200,6 +202,11 @@ section {
 
     &:first-of-type .wrapper {
         margin-bottom: 20px;
+
+        &.sitemap {
+            margin-top: 50px !important;
+            padding: 40px 25px !important;
+        }
     }
 
     p {
