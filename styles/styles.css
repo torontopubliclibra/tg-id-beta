@@ -300,7 +300,7 @@ h1 {
   text-align: center;
   line-height: 1;
   font-family: "LibreFranklin", sans-serif;
-  font-size: 4rem;
+  font-size: 2rem;
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
@@ -394,7 +394,7 @@ section blockquote button:hover img {
   }
 }
 
-footer p, footer a {
+footer p, footer a, footer span {
   text-align: center;
   font-size: 0.85rem;
 }
@@ -441,7 +441,6 @@ header {
   align-items: center;
   background: #e3e4fc;
   height: 175px;
-  margin-bottom: -175px;
   border-bottom: solid rgba(40, 43, 44, 0.95) 3px;
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
   z-index: 100;
@@ -449,7 +448,6 @@ header {
 @media only screen and (max-width: 500px) {
   header {
     height: 225px;
-    margin-bottom: -225px;
   }
 }
 header .wrapper {
@@ -540,16 +538,14 @@ header .nav-links .link .link-title p {
 }
 
 section {
-  padding-top: 175px;
-  margin-bottom: -195px;
+  scroll-margin-top: 190px;
 }
 section:last-of-type {
   margin-bottom: 50px;
 }
 @media only screen and (max-width: 500px) {
   section {
-    padding-top: 225px;
-    margin-bottom: -245px;
+    scroll-margin-top: 240px;
   }
   section:last-of-type {
     margin-bottom: 0;
@@ -582,6 +578,30 @@ section .wrapper {
     margin: 20px auto;
   }
 }
+section .wrapper.four-oh-four {
+  min-height: calc(100vh - 375px);
+  justify-content: center;
+}
+section .wrapper.four-oh-four h2 {
+  justify-content: flex-end;
+}
+section .wrapper.four-oh-four .link .link-title {
+  flex-direction: row-reverse;
+}
+section .wrapper.four-oh-four h2, section .wrapper.four-oh-four .link {
+  max-width: 500px;
+  margin: 0 auto;
+}
+section .wrapper.sitemap {
+  min-height: 200px;
+  margin: 75px auto !important;
+  justify-content: center;
+}
+@media only screen and (max-width: 500px) {
+  section .wrapper.sitemap {
+    margin: 20px auto !important;
+  }
+}
 section:first-of-type .wrapper {
   margin-bottom: 20px;
 }
@@ -606,7 +626,7 @@ section .links {
   width: 100%;
   margin-bottom: 10px;
 }
-section .links .link {
+section .link {
   background: #bebfde;
   border: solid rgba(40, 43, 44, 0.95) 3px;
   border-radius: 8px;
@@ -618,43 +638,46 @@ section .links .link {
   text-decoration: none;
   width: 100%;
 }
-section .links .link:hover {
+section .link:hover {
   color: #282B2C;
   font-style: normal;
   box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
 }
 @media only screen and (max-width: 970px) {
-  section .links .link:hover {
+  section .link:hover {
     box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
   }
 }
-section .links .link.disabled {
+section .link.disabled {
   opacity: 0.5;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
-section .links .link.disabled:hover {
+section .link.disabled:hover {
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
 }
-section .links .link p {
+section .link p {
   margin: 0;
   padding: 10px;
 }
-section .links .link .link-title {
+section .link .link-title {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
   width: 100%;
 }
-section .links .link .link-title img {
+section .link .link-title img {
   width: 20px;
   margin-right: 10px;
 }
-section .links .link .link-title img.rotate {
+section .link .link-title img.rotate {
   transform: rotate(180deg);
 }
-section .links .link .link-title p {
+section .link .link-title img.rotate-2 {
+  transform: rotate(270deg);
+}
+section .link .link-title p {
   text-align: left;
 }
 section .downloads {
@@ -666,7 +689,7 @@ section .downloads {
   width: 100%;
   margin-bottom: 10px;
 }
-section .downloads .download {
+section .download {
   background: #bebfde;
   border: solid rgba(40, 43, 44, 0.95) 3px;
   border-radius: 8px;
@@ -678,43 +701,43 @@ section .downloads .download {
   text-decoration: none;
   width: 100%;
 }
-section .downloads .download:hover {
+section .download:hover {
   color: #282B2C;
   font-style: normal;
   box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
 }
 @media only screen and (max-width: 970px) {
-  section .downloads .download:hover {
+  section .download:hover {
     box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
   }
 }
-section .downloads .download p {
+section .download p {
   margin: 0;
   padding: 10px;
 }
-section .downloads .download .link-title {
+section .download .link-title {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
   width: 100%;
 }
-section .downloads .download .link-title img {
+section .download .link-title img {
   width: 20px;
   margin-right: 10px;
 }
-section .downloads .download .link-title img.smaller {
+section .download .link-title img.smaller {
   padding: 1px;
 }
-section .downloads .download .link-title p {
+section .download .link-title p {
   text-align: left;
 }
-section .downloads .download hr {
+section .download hr {
   width: 100%;
   border: none;
   border-bottom: solid rgba(40, 43, 44, 0.95) 3px;
   margin: 0;
 }
-section .downloads .download .button-description {
+section .download .button-description {
   background: rgba(177, 132, 162, 0.9);
   border-radius: 0 0 6px 6px;
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5);

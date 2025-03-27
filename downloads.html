@@ -71,11 +71,9 @@
 				<div class="downloads">
 					<h2>Downloads</h2>
 
-					<a href="/name-changes" class="header-link">
-						<h3 id="name-changes">
-							Legal name changes
-						</h3>
-					</a>
+					<h3 id="name-changes">
+						Legal name changes
+					</h3>
 					<a id="11155e" class="download" href="/data/11155e.pdf" target="_blank">
 						<span class="link-title">
 						<p class="button-label">Ontario Name Change Application</p>
@@ -100,8 +98,14 @@
 						<hr>
 						<p class="button-description">PDF document [#5349e]</p>
 					</a>
+					<a class="link" href="/name-changes">
+						<span class="link-title">
+							<p class="button-label">More about legal name changes</p>
+							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
+						</span>
+					</a>
 
-					<h3 id="birth-certificates">Birth certificates</h3>
+					<h3 id="birth-certificates">Ontario birth certificates</h3>
 					<a id="11325e" class="download" href="/data/11325e.pdf" target="_blank">
 						<span class="link-title">
 						<p class="button-label">Ontario Birth Certificate Sex Designation Form</p>
@@ -110,14 +114,20 @@
 						<hr>
 						<p class="button-description">PDF document [#11325e]</p>
 					</a>
-					<a id="007-11324e" class="download" href="/data/007-11324e.pdf" target="_blank">
+					<a id="11324e" class="download" href="/data/007-11324e.pdf" target="_blank">
 						<span class="link-title">
 						<p class="button-label">Ontario Birth Certificate Sex Designation Statutory Declaration</p>
 						<img src="/assets/file-download.svg" alt="download icon">
 						</span>
 						<hr>
-						<p class="button-description">PDF document [#007-11324e]</p>
+						<p class="button-description">PDF document [#11324e]</p>
 					</a>
+					<div class="link disabled">
+						<span class="link-title">
+							<p class="button-label">More about Ontario birth certificates</p>
+							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
+						</span>
+					</div>
 					
 					<h3 id="travel-documents">Travel documents</h3>
 					<a id="pptc643" class="download" href="/data/pptc643.pdf" target="_blank">
@@ -128,6 +138,12 @@
 						<hr>
 						<p class="button-description">PDF document [#pptc643]</p>
 					</a>
+					<div class="link disabled">
+						<span class="link-title">
+							<p class="button-label">More about travel documents</p>
+							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
+						</span>
+					</div>
 
 					<h3 id="health-cards">Ontario health cards</h3>
 					<a id="0280-82e" class="download" href="/data/0280-82e.pdf" target="_blank">
@@ -138,6 +154,12 @@
 						<hr>
 						<p class="button-description">PDF document [#0280-82e]</p>
 					</a>
+					<div class="link disabled">
+						<span class="link-title">
+							<p class="button-label">More about Ontario health cards</p>
+							<img src="/assets/arrow-left.svg" class="rotate" alt="download icon">
+						</span>
+					</div>
 
 					<h3 id="presentation-materials">Presentation materials</h3>
 					<a class="download" href="/data/transID-2023.docx" target="_blank">
@@ -173,15 +195,17 @@
 			</div>
 		</section>
 
-		<!-- footer section -->
 		<footer>
 			<p>
 				<a href="/#about">About TG I.D.</a> | <a href="mailto:contact@danateagle.com">Contact the webmaster</a>
 			</p>
 			<p>
-				v0.6.0 | Last updated: March 2025 | <a href="/sitemap.xml">Sitemap</a>
+				<span id="version-code"></span><span id="last-updated"></span><a href="/sitemap.xml">Sitemap</a>
 			</p>
 		</footer>
+
+		<script src="./scripts/jquery-3.7.0.min.js" type="text/javascript"></script>
+		<script src="./scripts/app.js" type="text/javascript"></script>
 
 	</body>
 </html>
