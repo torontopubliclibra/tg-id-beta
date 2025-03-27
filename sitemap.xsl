@@ -13,7 +13,7 @@
         <html class="sitemap">
             <head>
                 <title>
-                    dana teagle dot com | sitemap
+                    TG I.D. | sitemapindex
                     <xsl:if test="sitemap:sitemapindex">Index</xsl:if>
                 </title>
                 <link rel="stylesheet" href="./styles/styles.css"/>
