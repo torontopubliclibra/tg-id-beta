@@ -637,60 +637,6 @@ section .links {
   width: 100%;
   margin-bottom: 10px;
 }
-section .link {
-  background: #bebfde;
-  border: solid rgba(40, 43, 44, 0.95) 3px;
-  border-radius: 8px;
-  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  width: 100%;
-}
-section .link:hover {
-  color: #282B2C;
-  font-style: normal;
-  box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
-}
-@media only screen and (max-width: 970px) {
-  section .link:hover {
-    box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
-  }
-}
-section .link.disabled {
-  opacity: 0.5;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
-}
-section .link.disabled:hover {
-  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
-}
-section .link p {
-  margin: 0;
-  padding: 10px;
-}
-section .link .link-title {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5px;
-  width: 100%;
-}
-section .link .link-title img {
-  width: 20px;
-  margin-right: 10px;
-}
-section .link .link-title img.rotate {
-  transform: rotate(180deg);
-}
-section .link .link-title img.rotate-2 {
-  transform: rotate(270deg);
-}
-section .link .link-title p {
-  text-align: left;
-}
 section .downloads, section .sources {
   display: flex;
   flex-direction: column;
@@ -700,7 +646,8 @@ section .downloads, section .sources {
   width: 100%;
   margin-bottom: 10px;
 }
-section .download {
+
+.download {
   background: #bebfde;
   border: solid rgba(40, 43, 44, 0.95) 3px;
   border-radius: 8px;
@@ -712,49 +659,118 @@ section .download {
   text-decoration: none;
   width: 100%;
 }
-section .download:hover {
+.download:hover {
   color: #282B2C;
   font-style: normal;
   box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
 }
 @media only screen and (max-width: 970px) {
-  section .download:hover {
+  .download:hover {
     box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
   }
 }
-section .download p {
+.download p {
   margin: 0;
   padding: 10px;
 }
-section .download .link-title {
+.download .link-title {
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
   width: 100%;
 }
-section .download .link-title img {
+.download .link-title img {
   width: 20px;
   margin-right: 10px;
 }
-section .download .link-title img.smaller {
+.download .link-title img.smaller {
   padding: 1px;
 }
-section .download .link-title p {
+.download .link-title p {
   text-align: left;
 }
-section .download hr {
+.download hr {
   width: 100%;
   border: none;
   border-bottom: solid rgba(40, 43, 44, 0.95) 3px;
   margin: 0;
 }
-section .download .button-description {
+.download .button-description {
   background: rgba(177, 132, 162, 0.75);
   border-radius: 0 0 6px 6px;
   box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5);
   width: 100%;
   font-size: 0.8rem;
   text-align: left;
+}
+
+.link {
+  background: #bebfde;
+  border: solid rgba(40, 43, 44, 0.95) 3px;
+  border-radius: 8px;
+  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  width: 100%;
+}
+.link:hover {
+  color: #282B2C;
+  font-style: normal;
+  box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -1px 2px rgba(40, 43, 44, 0.3), inset 0 2px 2px rgba(40, 43, 44, 0.4), inset 0 -2px 2px rgba(227, 228, 252, 0.6);
+}
+@media only screen and (max-width: 970px) {
+  .link:hover {
+    box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+  }
+}
+.link.disabled {
+  opacity: 0.5;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.link.disabled:hover {
+  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+}
+.link p {
+  margin: 0;
+  padding: 10px;
+}
+.link .link-title {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5px;
+  width: 100%;
+}
+.link .link-title img {
+  width: 20px;
+  margin-right: 10px;
+}
+.link .link-title img.rotate {
+  transform: rotate(180deg);
+}
+.link .link-title img.rotate-2 {
+  transform: rotate(270deg);
+}
+.link .link-title p {
+  text-align: left;
+}
+.link.back {
+  width: calc(90vw - 8px);
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.link.back .link-title {
+  flex-direction: row-reverse;
+}
+@media only screen and (max-width: 970px) {
+  .link.back {
+    margin-bottom: 20px;
+  }
 }
 
 h1 {
