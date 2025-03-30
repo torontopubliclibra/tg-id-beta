@@ -1,7 +1,7 @@
 // app object
 let app = {
 
-    version: "0.8.6",
+    version: "0.8.7",
     updated: "March 2025",
 
     // page elements
