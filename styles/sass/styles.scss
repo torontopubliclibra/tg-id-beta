@@ -109,6 +109,7 @@ header {
             }
 
             .link-title {
+                height: 45px;
                 display: flex;
                 justify-content: space-between;
                 padding: 0 5px;
@@ -358,7 +359,7 @@ section {
 }
 
 .link {
-    height: 45px;
+    min-height: 45px;
     background: $color1;
     border: solid rgba($black, 0.95) 3px;
     border-radius: 8px;

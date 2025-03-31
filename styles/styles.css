@@ -257,7 +257,7 @@ body, header, footer, button, select, option, a {
   color: #282B2C;
 }
 
-body, button, input, select, option {
+body, button, input, select {
   font-family: "LibreFranklin", sans-serif;
   font-display: swap;
   line-height: 1.25;
@@ -529,6 +529,7 @@ header .nav-links .link p {
   padding: 10px;
 }
 header .nav-links .link .link-title {
+  height: 45px;
   display: flex;
   justify-content: space-between;
   padding: 0 5px;
@@ -756,7 +757,7 @@ section .downloads, section .sources {
 }
 
 .link {
-  height: 45px;
+  min-height: 45px;
   background: #bebfde;
   border: solid rgba(40, 43, 44, 0.95) 3px;
   border-radius: 8px;
