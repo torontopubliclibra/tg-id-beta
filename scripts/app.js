@@ -35,6 +35,12 @@ let app = {
             regions: ["Ontario", "Canada"],
         },
         {
+            loc: "/permanent-resident-cards",
+            label: "Permanent resident cards",
+            regions: ["Ontario", "Canada"],
+            disabled: true,
+        },
+        {
             loc: "/social-insurance-registry",
             label: "Social Insurance Registry",
             regions: ["Ontario", "Canada"],
