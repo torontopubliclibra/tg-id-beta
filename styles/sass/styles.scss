@@ -76,6 +76,7 @@ header {
         }
 
         .link {
+            height: 45px;
             background: rgba($color2, 0.75);
             border: solid rgba($black, 0.95) 3px;
             border-radius: 8px;
@@ -190,12 +191,10 @@ section {
 
         &.sitemap {
             justify-content: center;
-            margin-top: 125px !important;
-            margin-bottom: 100px !important;
             padding: 40px !important;
 
             @media only screen and (max-width: $mobile) {
-                margin: 20px auto !important;
+                padding: 20px auto !important;
             }
         }
     }
@@ -224,7 +223,7 @@ section {
         }
     }
 
-    .links {
+    .links, .filters {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -232,6 +231,57 @@ section {
         gap: 15px;
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    .filter {
+        height: 45px;
+        background: rgba($color2, 0.75);
+        border: solid rgba($black, 0.95) 3px;
+        border-radius: 8px;
+        box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        width: 100%;
+        padding: 5px;
+        padding-right: 0;
+        border-right: none;
+        gap: 5px;
+        cursor: default;
+    
+        select {
+            border: solid rgba($black, 0.95) 3px;
+            border-radius: 0px 8px 8px 0px;
+            box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+            width: 100%;
+            text-align: left;
+            height: 45px;
+            padding-left: 10px;
+            cursor: pointer;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background: url("/assets/arrow-down.svg") no-repeat right $color1;
+            background-size: 20px auto;
+            background-position-x: calc(100% - 15px);
+            background-position-y: 45%;
+
+            &:hover, &:focus {
+                color: $black;
+                font-style: normal;
+                box-shadow: 0 1px 2px rgba($white, 0.8), 0 -1px 2px rgba($black, 0.3), inset 0 2px 2px rgba($black, 0.4), inset 0 -2px 2px rgba($white, 0.6);
+        
+                @media only screen and (max-width: $tablet) {
+                    box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+                }
+            }
+        }
+    
+        p {
+            margin: 0;
+            padding: 10px;
+        }
     }
 
     .downloads, .sources {
@@ -308,6 +358,7 @@ section {
 }
 
 .link {
+    height: 45px;
     background: $color1;
     border: solid rgba($black, 0.95) 3px;
     border-radius: 8px;

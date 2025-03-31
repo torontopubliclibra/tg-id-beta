@@ -14,31 +14,31 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://tg-id.ca/name-changes</loc>
-        <lastmod>2025-03-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://tg-id.ca/birth-certificates</loc>
-        <lastmod>2025-03-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://tg-id.ca/health-cards</loc>
-        <lastmod>2025-03-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://tg-id.ca/drivers-licenses</loc>
-        <lastmod>2025-03-30</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
         <loc>https://tg-id.ca/canadian-passports</loc>
+        <lastmod>2025-03-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+        <url>
+        <loc>https://tg-id.ca/on/name-changes</loc>
+        <lastmod>2025-03-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tg-id.ca/on/birth-certificates</loc>
+        <lastmod>2025-03-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tg-id.ca/on/health-cards</loc>
+        <lastmod>2025-03-30</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tg-id.ca/on/drivers-licenses</loc>
         <lastmod>2025-03-30</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>

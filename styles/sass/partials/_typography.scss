@@ -26,12 +26,12 @@
   }
 }
 
-body, header, footer, button, select, a {
+body, header, footer, button, select, option, a {
   color: $black;
 }
 
 // default typography
-body, button, input, select {
+body, button, input, select, option {
   font-family: "LibreFranklin", sans-serif;
   font-display: swap;
   line-height: 1.25;
@@ -101,6 +101,10 @@ h2 {
   @media only screen and (max-width: $tablet) {
     font-size: 1.25rem;
   }
+}
+
+#links h2 {
+  font-size: 1.25rem;
 }
 
 h3 {
