@@ -358,7 +358,7 @@ a.header-link {
   text-decoration: none;
 }
 
-section p, section a, section li {
+section p, section a, section li, section select {
   font-size: 0.95rem;
 }
 section blockquote {
