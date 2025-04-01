@@ -7,11 +7,11 @@ let app = {
         "Canada"
     ],
     updates: [
-        "Name & gender marker",
-        "Gender marker"
+        "Name & gender",
+        "Gender"
     ],
     region: "Ontario",
-    updating: "Name & gender marker",
+    updating: "Name & gender",
     filterRemembered: false,
     pages: [
         {
@@ -24,7 +24,7 @@ let app = {
             loc: "/on/birth-certificates",
             label: "Ontario birth certificates",
             regions: ["Ontario"],
-            updates: ["Name", "Gender marker"]
+            updates: ["Name", "Gender"]
         },
         {
             loc: "/on/health-cards",
@@ -36,40 +36,40 @@ let app = {
             loc: "/on/drivers-licenses",
             label: "Ontario driver's licenses & photo cards",
             regions: ["Ontario"],
-            updates: ["Name", "Gender marker"]
+            updates: ["Name", "Gender"]
         },
         {
             loc: "/canadian-passports",
             label: "Canadian passports",
             regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender marker"]
+            updates: ["Name", "Gender"]
         },
         {
             loc: "/permanent-resident-cards",
             label: "Permanent resident cards",
             regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender marker"],
+            updates: ["Name", "Gender"],
             disabled: true,
         },
         {
             loc: "/social-insurance-registry",
             label: "Social Insurance Registry",
             regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender marker"],
+            updates: ["Name", "Gender"],
             disabled: true,
         },
         {
             loc: "/canada-revenue-agency",
             label: "Canada Revenue Agency",
             regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender marker"],
+            updates: ["Name", "Gender"],
             disabled: true,
         },
         {
             loc: "/downloads",
             label: "Downloads",
             regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender marker"]
+            updates: ["Name", "Gender"]
         },
     ],
     downloads: [
@@ -119,7 +119,7 @@ let app = {
                 },
             ],
             sources: ["https://www.ontario.ca/page/changing-your-sex-designation-your-birth-registration-and-birth-certificate"],
-            updates: ["Name", "Gender marker"]
+            updates: ["Name", "Gender"]
         },
         {
             id: "health-cards",
@@ -155,7 +155,7 @@ let app = {
                 },
             ],
             sources: ["https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/new-adult-passport/required-documents-photos", "https://www.canada.ca/en/immigration-refugees-citizenship/services/canadian-passports/change-sex"],
-            updates: ["Name", "Gender marker"]
+            updates: ["Name", "Gender"]
         },
     ],
     elements: {
@@ -245,8 +245,8 @@ let app = {
             let pageLinks = [`<h2>Navigate to</h2>`];
             let filteredPages = app.pages.filter((page) => page.regions.includes(app.region));
             filteredPages = filteredPages.filter((page) => {
-                if (app.updating === "Gender marker") {
-                    return page.updates.includes("Gender marker");
+                if (app.updating === "Gender") {
+                    return page.updates.includes("Gender");
                 } else {
                     return page;
                 }
@@ -278,8 +278,8 @@ let app = {
             let downloadSources = []
             let filteredDownloads = app.downloads.filter((category) => category.regions.includes(app.region));
             filteredDownloads = filteredDownloads.filter((category) => {
-                if (app.updating === "Gender marker") {
-                    return category.updates.includes("Gender marker");
+                if (app.updating === "Gender") {
+                    return category.updates.includes("Gender");
                 } else {
                     return category;
                 }
