@@ -241,12 +241,12 @@ section {
             align-items: center;
             position: absolute;
             gap: 10px;
-            top: -2px;
+            top: 1px;
             right: -3px;
             padding: 5px;
 
             @media only screen and (max-width: $tablet) {
-                top: -4px;
+                top: -3px;
             }
             input {
                 visibility: hidden;
@@ -261,10 +261,7 @@ section {
                 border: solid rgba($black, 0.95) 2px;
                 border-radius: 4px;
                 box-shadow: inset 0 -1px 1px rgba($black, 0.5), inset 0 2px 2px rgba($white, 0.5);
-
-                @media only screen and (max-width: $tablet) {
-                    margin-bottom: 2px;
-                }
+                margin-bottom: 2px;
             }
             &:hover input ~ .checkmark {
                 background-color: $color1;
@@ -294,7 +291,7 @@ section {
                 -webkit-transform: rotate(45deg);
                 -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
-                margin-top: 1px;
+                margin-top: -1px;
                 @media only screen and (max-width: $tablet) {
                     margin-top: -0.5px;
                 }

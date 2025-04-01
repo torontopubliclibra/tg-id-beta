@@ -264,6 +264,10 @@ body, button, input, select {
   letter-spacing: 2%;
 }
 
+#filter-checkbox {
+  font-size: 0.85rem;
+}
+
 h1, h2, h3, h4 {
   display: flex;
   align-items: center;
@@ -653,13 +657,13 @@ section .links #filter-checkbox, section .filters #filter-checkbox {
   align-items: center;
   position: absolute;
   gap: 10px;
-  top: -2px;
+  top: 1px;
   right: -3px;
   padding: 5px;
 }
 @media only screen and (max-width: 970px) {
   section .links #filter-checkbox, section .filters #filter-checkbox {
-    top: -4px;
+    top: -3px;
   }
 }
 section .links #filter-checkbox input, section .filters #filter-checkbox input {
@@ -675,11 +679,7 @@ section .links #filter-checkbox .checkmark, section .filters #filter-checkbox .c
   border: solid rgba(40, 43, 44, 0.95) 2px;
   border-radius: 4px;
   box-shadow: inset 0 -1px 1px rgba(40, 43, 44, 0.5), inset 0 2px 2px rgba(227, 228, 252, 0.5);
-}
-@media only screen and (max-width: 970px) {
-  section .links #filter-checkbox .checkmark, section .filters #filter-checkbox .checkmark {
-    margin-bottom: 2px;
-  }
+  margin-bottom: 2px;
 }
 section .links #filter-checkbox:hover input ~ .checkmark, section .filters #filter-checkbox:hover input ~ .checkmark {
   background-color: #bebfde;
@@ -708,7 +708,7 @@ section .links #filter-checkbox .checkmark:after, section .filters #filter-check
   border: solid #282B2C;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
-  margin-top: 1px;
+  margin-top: -1px;
 }
 @media only screen and (max-width: 970px) {
   section .links #filter-checkbox .checkmark:after, section .filters #filter-checkbox .checkmark:after {
