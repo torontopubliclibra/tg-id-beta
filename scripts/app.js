@@ -293,8 +293,8 @@ let app = {
                 })
             })
             app.elements.downloadLinks.innerHTML = downloadLinks.reduce(
-                (accumulator, currentValue) => accumulator + currentValue + `<h3 id="presentation-materials">Presentation materials</h3><a class="download" href="/data/transID-2023.docx" target="_blank"><span class="link-title"><p class="button-label">Trans I.D. Ontario document</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS Word document for the CUPE 3903 TFAC presentation on Nov 29, 2023</p></a><a class="download" href="/data/transID-2023.pptx" target="_blank"><span class="link-title"><p class="button-label">Trans I.D. Ontario slideshow</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS Powerpoint slideshow for the CUPE 3903 TFAC presentation on Nov 29, 2023</p></a>`
-            );
+                (accumulator, currentValue) => accumulator + currentValue
+            ) + `<h3 id="presentation-materials">Presentation materials</h3><a class="download" href="/data/transID-2023.docx" target="_blank"><span class="link-title"><p class="button-label">Trans I.D. Ontario document</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS Word document for the CUPE 3903 TFAC presentation on Nov 29, 2023</p></a><a class="download" href="/data/transID-2023.pptx" target="_blank"><span class="link-title"><p class="button-label">Trans I.D. Ontario slideshow</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS Powerpoint slideshow for the CUPE 3903 TFAC presentation on Nov 29, 2023</p></a>`;
             app.elements.downloadSources.innerHTML = `<h2>Sources</h2><ul>` + downloadSources.reduce(
                 (accumulator, currentValue) => accumulator + currentValue
             );
