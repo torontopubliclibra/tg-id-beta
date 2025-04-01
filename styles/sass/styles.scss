@@ -241,12 +241,12 @@ section {
             align-items: center;
             position: absolute;
             gap: 10px;
-            top: 1px;
+            top: -2px;
             right: -3px;
             padding: 5px;
 
             @media only screen and (max-width: $tablet) {
-                top: -3px;
+                top: -4px;
             }
             input {
                 visibility: hidden;

@@ -657,13 +657,13 @@ section .links #filter-checkbox, section .filters #filter-checkbox {
   align-items: center;
   position: absolute;
   gap: 10px;
-  top: 1px;
+  top: -2px;
   right: -3px;
   padding: 5px;
 }
 @media only screen and (max-width: 970px) {
   section .links #filter-checkbox, section .filters #filter-checkbox {
-    top: -3px;
+    top: -4px;
   }
 }
 section .links #filter-checkbox input, section .filters #filter-checkbox input {
