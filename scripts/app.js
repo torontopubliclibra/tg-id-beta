@@ -1,6 +1,6 @@
 // app object
 let app = {
-    version: "0.8.9",
+    version: "0.8.10",
     updated: "March 2025",
     regions: [
         "Ontario",
@@ -48,8 +48,7 @@ let app = {
             loc: "/permanent-resident-cards",
             label: "Permanent resident cards",
             regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender"],
-            disabled: true,
+            updates: ["Name"]
         },
         {
             loc: "/social-insurance-registry",
