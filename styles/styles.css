@@ -335,6 +335,10 @@ h3 {
   }
 }
 
+#links h3 {
+  font-size: 1.1rem;
+}
+
 h4 {
   margin: 0;
   font-size: 1.1rem;
@@ -633,6 +637,7 @@ section ul li, section ol li {
   margin-bottom: 5px;
 }
 section .links, section .filters {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -640,6 +645,75 @@ section .links, section .filters {
   gap: 15px;
   width: 100%;
   margin-bottom: 10px;
+}
+section .links #filter-checkbox, section .filters #filter-checkbox {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 10px;
+  top: -2px;
+  right: -3px;
+  padding: 5px;
+}
+@media only screen and (max-width: 970px) {
+  section .links #filter-checkbox, section .filters #filter-checkbox {
+    top: -4px;
+  }
+}
+section .links #filter-checkbox input, section .filters #filter-checkbox input {
+  visibility: hidden;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+section .links #filter-checkbox .checkmark, section .filters #filter-checkbox .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #e3e4fc;
+  border: solid rgba(40, 43, 44, 0.95) 2px;
+  border-radius: 4px;
+  box-shadow: inset 0 -1px 1px rgba(40, 43, 44, 0.5), inset 0 2px 2px rgba(227, 228, 252, 0.5);
+}
+@media only screen and (max-width: 970px) {
+  section .links #filter-checkbox .checkmark, section .filters #filter-checkbox .checkmark {
+    margin-bottom: 2px;
+  }
+}
+section .links #filter-checkbox:hover input ~ .checkmark, section .filters #filter-checkbox:hover input ~ .checkmark {
+  background-color: #bebfde;
+  box-shadow: 0 1px 2px rgba(227, 228, 252, 0.8), 0 -0.5px 1px rgba(40, 43, 44, 0.3), inset 0 1px 1px rgba(40, 43, 44, 0.4), inset 0 -1px 1px rgba(227, 228, 252, 0.6);
+}
+@media only screen and (max-width: 970px) {
+  section .links #filter-checkbox:hover input ~ .checkmark, section .filters #filter-checkbox:hover input ~ .checkmark {
+    background-color: #e3e4fc;
+    box-shadow: inset 0 -1px 1px rgba(40, 43, 44, 0.5), inset 0 2px 2px rgba(227, 228, 252, 0.5);
+  }
+}
+section .links #filter-checkbox input:checked ~ .checkmark, section .filters #filter-checkbox input:checked ~ .checkmark {
+  background-color: rgba(177, 132, 162, 0.75);
+}
+section .links #filter-checkbox input:checked ~ .checkmark:after, section .filters #filter-checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+section .links #filter-checkbox .checkmark:after, section .filters #filter-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  right: 12.5px;
+  top: 8px;
+  width: 5.5px;
+  height: 12px;
+  border: solid #282B2C;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: 1px;
+}
+@media only screen and (max-width: 970px) {
+  section .links #filter-checkbox .checkmark:after, section .filters #filter-checkbox .checkmark:after {
+    margin-top: -0.5px;
+  }
 }
 section .filter {
   height: 45px;
