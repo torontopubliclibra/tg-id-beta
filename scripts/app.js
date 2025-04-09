@@ -1,6 +1,6 @@
 // app object
 let app = {
-    version: "0.8.10",
+    version: "0.8.11",
     updated: "March 2025",
     regions: [
         "Ontario",
@@ -55,14 +55,12 @@ let app = {
             label: "Social Insurance Registry",
             regions: ["Ontario", "Canada"],
             updates: ["Name", "Gender"],
-            disabled: true,
         },
         {
             loc: "/canada-revenue-agency",
             label: "Canada Revenue Agency",
             regions: ["Ontario", "Canada"],
             updates: ["Name", "Gender"],
-            disabled: true,
         },
         {
             loc: "/downloads",
