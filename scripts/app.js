@@ -169,6 +169,8 @@ let app = {
         downloadSources: document.querySelector("#downloadSources"),
         filterCheckbox: $("#filter-checkbox"),
         filterCheckboxInput: $("#filter-checkbox input"),
+        form: document.querySelector("form"),
+        formActions: document.querySelector(".form-actions"),
     },
     functions: {
         scroll: (direction) => {
@@ -184,6 +186,34 @@ let app = {
             };
             window.scrollTo({top: location, behavior: "smooth"});
             document.activeElement.blur();
+        },
+        handleSubmit: (e) => {
+            e.preventDefault();
+
+            const contactForm = e.target;
+            const formData = new FormData(contactForm);
+
+            app.elements.form.classList.add("hide");
+            app.elements.formActions.classList.add("show");
+            app.elements.formActions.innerHTML = `<p>Sending...</p>`;
+          
+            setTimeout(() => {
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                  })
+                    .then(() => {
+                      app.elements.form.reset();
+                      app.elements.formActions.innerHTML = `<p>Thank you for your email. We'll be in touch!</p>`;
+                      
+                    })
+                    .catch(error => {
+                      app.elements.form.reset();
+                      app.elements.formActions.innerHTML = `<p>Something went wrong and your message could not be sent. Please try again later.</p>`;
+                      alert(error);
+                  });
+            }, 1000);
         },
         regionsDisplay: () => {
             let regionOptions = [];
@@ -306,6 +336,9 @@ let app = {
         }
         if (app.elements.filterCheckbox) {
             app.elements.filterCheckboxInput.on("change", () => app.functions.rememberFilters());
+        }
+        if (document.querySelector("form")) {
+            document.querySelector("form").addEventListener("submit", app.functions.handleSubmit);
         }
     },
     init: () => {

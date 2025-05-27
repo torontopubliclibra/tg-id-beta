@@ -422,7 +422,7 @@ footer p, footer a, footer span {
     opacity: 1;
   }
 }
-section {
+section, .form-actions, form {
   animation: fade-in 1.25s;
 }
 
@@ -922,6 +922,21 @@ h1 .hide {
   display: none;
 }
 
+.form-actions {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(177, 132, 162, 0.75);
+  border: solid rgba(40, 43, 44, 0.95) 3px;
+  border-radius: 8px;
+  box-shadow: inset 0 -2px 2px rgba(40, 43, 44, 0.5), inset 0 4px 4px rgba(227, 228, 252, 0.5);
+}
+.form-actions.show {
+  display: flex;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -931,6 +946,9 @@ form {
   margin: 0 auto;
   margin-top: 5px;
   margin-bottom: 0;
+}
+form.hide {
+  display: none;
 }
 @media only screen and (max-width: 970px) {
   form {

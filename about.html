@@ -80,7 +80,7 @@
 				<h2>Get In Touch</h2>
 				<p>Is there a process or feature that you would like to see as a part of TG I.D.?</p>
 				<p>Get in touch using the form below or by <a href="mailto:contact@danateagle.com">contacting the webmaster directly</a>.</p>
-				<form name="contact" netlify>
+        		<form name="contact" method="POST" data-netlify="true">
 					<fieldset>
 						<label for="name">Name</label>
 						<input type="text" name="name" id="name" required="required" aria-required="true" title="Please enter your name" />
@@ -97,6 +97,8 @@
 						<span>Send message</span>
 					</button>
 				</form>
+				<div class="form-actions">
+				</div>
 			</div>
 		</section>
 
