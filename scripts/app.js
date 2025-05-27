@@ -1,7 +1,7 @@
 // app object
 let app = {
-    version: "0.9.0",
-    updated: "April 2025",
+    version: "0.9.1",
+    updated: "May 2025",
     regions: [
         "Ontario",
         "Canada"
@@ -169,6 +169,8 @@ let app = {
         downloadSources: document.querySelector("#downloadSources"),
         filterCheckbox: $("#filter-checkbox"),
         filterCheckboxInput: $("#filter-checkbox input"),
+        form: document.querySelector("form"),
+        formActions: document.querySelector(".form-actions"),
     },
     functions: {
         scroll: (direction) => {
@@ -184,6 +186,34 @@ let app = {
             };
             window.scrollTo({top: location, behavior: "smooth"});
             document.activeElement.blur();
+        },
+        handleSubmit: (e) => {
+            e.preventDefault();
+
+            const contactForm = e.target;
+            const formData = new FormData(contactForm);
+
+            app.elements.form.classList.add("hide");
+            app.elements.formActions.classList.add("show");
+            app.elements.formActions.innerHTML = `<p>Sending...</p>`;
+          
+            setTimeout(() => {
+                fetch("/", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: new URLSearchParams(formData).toString()
+                  })
+                    .then(() => {
+                      app.elements.form.reset();
+                      app.elements.formActions.innerHTML = `<p>Thank you for your email. We'll be in touch!</p>`;
+                      
+                    })
+                    .catch(error => {
+                      app.elements.form.reset();
+                      app.elements.formActions.innerHTML = `<p>Something went wrong and your message could not be sent. Please try again later.</p>`;
+                      alert(error);
+                  });
+            }, 1000);
         },
         regionsDisplay: () => {
             let regionOptions = [];
@@ -291,7 +321,7 @@ let app = {
             })
             app.elements.downloadLinks.innerHTML = downloadLinks.reduce(
                 (accumulator, currentValue) => accumulator + currentValue
-            ) + `<h3 id="presentation-materials">Presentation materials</h3><a class="download" href="/data/tg-id-0425.pdf" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PDF)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">PDF document of the April 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0425.odp" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (ODP)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">OpenDocument presentation file of the April 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0425.pptx" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PPTX)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS PowerPoint presentation file of the April 2025 Ontario TG I.D. workshop slideshow</p></a>`;
+            ) + `<h3 id="presentation-materials">Presentation materials</h3><a class="download" href="/data/tg-id-0525.pdf" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PDF)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">PDF document of the May 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0525.odp" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (ODP)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">OpenDocument presentation file of the May 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0525.pptx" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PPTX)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS PowerPoint presentation file of the May 2025 Ontario TG I.D. workshop slideshow</p></a>`;
             app.elements.downloadSources.innerHTML = `<h2>Sources</h2><ul>` + downloadSources.reduce(
                 (accumulator, currentValue) => accumulator + currentValue
             );
@@ -306,6 +336,9 @@ let app = {
         }
         if (app.elements.filterCheckbox) {
             app.elements.filterCheckboxInput.on("change", () => app.functions.rememberFilters());
+        }
+        if (document.querySelector("form")) {
+            document.querySelector("form").addEventListener("submit", app.functions.handleSubmit);
         }
     },
     init: () => {
