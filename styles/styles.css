@@ -952,6 +952,8 @@ form fieldset {
   justify-content: center;
 }
 form fieldset label, form fieldset input, form fieldset textarea {
+  font-family: "LibreFranklin", sans-serif;
+  font-size: 0.85rem;
   width: 90%;
   min-width: 90%;
 }

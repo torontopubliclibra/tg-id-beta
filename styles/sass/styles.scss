@@ -547,8 +547,9 @@ form {
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
-
         label, input, textarea {
+            font-family: "LibreFranklin", sans-serif;
+            font-size: 0.85rem;
             width: 90%;
             min-width: 90%;
         }
