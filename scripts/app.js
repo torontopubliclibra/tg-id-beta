@@ -1,6 +1,6 @@
 // app object
 let app = {
-    version: "0.9.0",
+    version: "0.9.1",
     updated: "May 2025",
     regions: [
         "Ontario",
