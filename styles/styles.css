@@ -929,6 +929,7 @@ h1 .hide {
   align-items: center;
   min-width: 100%;
   padding: 20px;
+  margin-top: 5px;
   background: rgba(177, 132, 162, 0.75);
   border: solid rgba(40, 43, 44, 0.95) 3px;
   border-radius: 8px;
