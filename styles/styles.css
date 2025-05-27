@@ -927,6 +927,7 @@ h1 .hide {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-width: 100%;
   padding: 20px;
   background: rgba(177, 132, 162, 0.75);
   border: solid rgba(40, 43, 44, 0.95) 3px;
@@ -991,6 +992,7 @@ form fieldset input, form fieldset textarea {
 }
 form fieldset textarea {
   min-height: 100px;
+  padding: 10px;
 }
 form fieldset p {
   font-size: 0.75rem;

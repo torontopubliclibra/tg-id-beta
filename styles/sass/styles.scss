@@ -524,6 +524,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 100%;
     padding: 20px;
     background: rgba($color2, 0.75);
     border: solid rgba($black, 0.95) 3px;
@@ -589,6 +590,7 @@ form {
         }
         textarea {
             min-height: 100px;
+            padding: 10px;
         }
         p {
             font-size: 0.75rem;
