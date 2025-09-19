@@ -51,7 +51,7 @@
 				<div class="nav-links">
 					<a class="link" href="https://start.duckduckgo.com/">
 						<span class="link-title">
-							<p class="button-label">Quick Exit</p>
+							<p class="button-label"><span class="mobile-hide">Quick </span>Exit</p>
 							<img src="/assets/external-link.svg" class="smaller" alt="external link icon">
 						</span>
 					</a>
@@ -66,10 +66,40 @@
 		</header>
 
 		<section id="links">
+			<div class="wrapper start">
+				<a class="link start" href="/start">
+					<span class="link-title">
+						<p class="button-label">Getting started</p>
+						<img src="/assets/arrow-left.svg" class="rotate" alt="arrow icon">
+					</span>
+				</a>
+				<a class="link start" href="/workshops">
+					<span class="link-title">
+						<p class="button-label">TG I.D. workshops</p>
+						<img src="/assets/arrow-left.svg" class="rotate" alt="arrow icon">
+					</span>
+				</a>
+				<a class="link start" href="/downloads">
+					<span class="link-title">
+						<p class="button-label">Downloads</p>
+						<img src="/assets/arrow-left.svg" class="rotate" alt="arrow icon">
+					</span>
+				</a>
+				<a class="link start" href="/about">
+					<span class="link-title">
+						<p class="button-label">About TG I.D.</p>
+						<img src="/assets/arrow-left.svg" class="rotate" alt="arrow icon">
+					</span>
+				</a>
+			</div>
+		</section>
+
+		<section id="links">
 			<div class="wrapper">
+				<h2>Step-by-step guides</h2>
 				<div class="filters">
-					<h2>Filter by</h2>
-					<label for="filter-remember" id="filter-checkbox"><input type="checkbox" id="filter-remember" name="filter-remember">Remember filters<span class="checkmark"></span></label>
+					<h3>Filter by</h3>
+					<label for="filter-remember" id="filter-checkbox"><input type="checkbox" id="filter-remember" name="filter-remember">Remember<span class="mobile-hide"> filters</span><span class="checkmark"></span></label>
 					<div class="filter">
 						<p class="select-label">Updating</p>
 						<select name="updating" id="updating">
@@ -82,7 +112,7 @@
 					</div>
 				</div>
 				<div class="links" id="pageLinks">
-					<h2>Navigate to</h2>
+					<h3>Navigate to</h3>
 				</div>
 			</div>
 		</section>

@@ -3,67 +3,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://tg-id.ca</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tg-id.ca/start</loc>
+        <lastmod>2025-09-19</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://tg-id.ca/workshops</loc>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/about</loc>
-        <lastmod>2025-05-29</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/downloads</loc>
-        <lastmod>2025-05-27</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/canadian-passports</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/permanent-resident-cards</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/social-insurance-registry</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/canada-revenue-agency</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/on/name-changes</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/on/birth-certificates</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/on/health-cards</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://tg-id.ca/on/drivers-licenses</loc>
-        <lastmod>2025-04-24</lastmod>
+        <lastmod>2025-09-19</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

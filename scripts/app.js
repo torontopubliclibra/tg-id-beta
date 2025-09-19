@@ -1,7 +1,7 @@
 // app object
 let app = {
-    version: "0.9.2",
-    updated: "May 2025",
+    version: "0.10.0",
+    updated: "September 2025",
     regions: [
         "Ontario",
         "Canada"
@@ -61,13 +61,7 @@ let app = {
             label: "Canada Revenue Agency",
             regions: ["Ontario", "Canada"],
             updates: ["Name", "Gender"],
-        },
-        {
-            loc: "/downloads",
-            label: "Downloads",
-            regions: ["Ontario", "Canada"],
-            updates: ["Name", "Gender"]
-        },
+        }
     ],
     downloads: [
         {
@@ -273,7 +267,7 @@ let app = {
             };
         },
         pageLinksDisplay: () => {
-            let pageLinks = [`<h2>Navigate to</h2>`];
+            let pageLinks = [`<h3>Navigate to</h3>`];
             let filteredPages = app.pages.filter((page) => page.regions.includes(app.region));
             filteredPages = filteredPages.filter((page) => {
                 if (app.updating === "Gender") {
@@ -321,7 +315,7 @@ let app = {
             })
             app.elements.downloadLinks.innerHTML = downloadLinks.reduce(
                 (accumulator, currentValue) => accumulator + currentValue
-            ) + `<h3 id="presentation-materials">Presentation materials</h3><a class="download" href="/data/tg-id-0525.pdf" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PDF)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">PDF document of the May 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0525.odp" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (ODP)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">OpenDocument presentation file of the May 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0525.pptx" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PPTX)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS PowerPoint presentation file of the May 2025 Ontario TG I.D. workshop slideshow</p></a>`;
+            ) + `<h3 id="presentation-materials">Presentation materials <button onclick="navigator.clipboard.writeText('https://tg-id.ca/downloads#presentation-materials'); window.location.href='#presentation-materials'"><img src="/assets/link.svg" alt="link icon"></button></h3><a class="download" href="/data/tg-id-0525.pdf" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PDF)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">PDF document of the May 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0525.odp" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (ODP)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">OpenDocument presentation file of the May 2025 Ontario TG I.D. workshop slideshow</p></a><a class="download" href="/data/tg-id-0525.pptx" target="_blank"><span class="link-title"><p class="button-label">Ontario TG I.D. slideshow (PPTX)</p><img src="/assets/file-download.svg" alt="download icon"></span><hr><p class="button-description">MS PowerPoint presentation file of the May 2025 Ontario TG I.D. workshop slideshow</p></a>`;
             app.elements.downloadSources.innerHTML = `<h2>Sources</h2><ul>` + downloadSources.reduce(
                 (accumulator, currentValue) => accumulator + currentValue
             );

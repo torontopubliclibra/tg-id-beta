@@ -38,8 +38,15 @@ body, button, input, select {
   letter-spacing: 2%;
 }
 
-#filter-checkbox {
+#filter-checkbox, #filter-checkbox span {
   font-size: 0.85rem;
+}
+
+hr {
+  border: none;
+  width: 100%;
+  border-top: 3px solid $color4;
+  margin: 5px 0;
 }
 
 h1, h2, h3, h4 {
