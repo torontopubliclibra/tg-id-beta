@@ -406,7 +406,6 @@ section {
         display: flex;
         flex-direction: column;
         gap: 15px;
-        width: 100%;
         margin-bottom: 10px;
     }
 }
@@ -490,12 +489,12 @@ section {
     text-decoration: none;
     width: 100%;
 
-    &.start {
-        background: rgba($color3, 0.75);
-        border: solid rgba($black, 0.95) 3px;
-        border-radius: 8px;
-        box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
-    }
+    // &.start {
+    //     background: rgba($color3, 0.75);
+    //     border: solid rgba($black, 0.95) 3px;
+    //     border-radius: 8px;
+    //     box-shadow: inset 0 -2px 2px rgba($black, 0.5), inset 0 4px 4px rgba($white, 0.5);
+    // }
 
     &.submit {
         background: rgba($color2, 0.75);
