@@ -708,13 +708,13 @@ section .links #filter-checkbox, section .filters #filter-checkbox {
   align-items: center;
   position: absolute;
   gap: 10px;
-  top: -2px;
+  top: 8px;
   right: -3px;
   padding: 5px;
 }
 @media only screen and (max-width: 970px) {
   section .links #filter-checkbox, section .filters #filter-checkbox {
-    top: -4px;
+    top: 4px;
   }
 }
 section .links #filter-checkbox input, section .filters #filter-checkbox input {
@@ -832,6 +832,9 @@ section .downloads, section .sources {
   flex-direction: column;
   gap: 15px;
   margin-bottom: 10px;
+}
+section .downloads {
+  min-width: 100%;
 }
 
 .download {

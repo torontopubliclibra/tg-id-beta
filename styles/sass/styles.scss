@@ -283,12 +283,12 @@ section {
             align-items: center;
             position: absolute;
             gap: 10px;
-            top: -2px;
+            top: 8px;
             right: -3px;
             padding: 5px;
 
             @media only screen and (max-width: $tablet) {
-                top: -4px;
+                top: 4px;
             }
             input {
                 visibility: hidden;
@@ -407,6 +407,10 @@ section {
         flex-direction: column;
         gap: 15px;
         margin-bottom: 10px;
+    }
+
+    .downloads {
+        min-width: 100%;
     }
 }
 
